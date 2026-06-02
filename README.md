@@ -1,17 +1,7 @@
 # Simple Calculator (Node.js)
 
-A simple command-line calculator built as a group project for Open Source Software Development.
-
-## Features
-- Addition
-- Subtraction
-- Multiplication
-- Division
+A collaborative command-line calculator built by 17 students as part of Open Source Software Development course.
 
 ## How to Run
-
-1. Make sure you have Node.js installed.
-2. Run the following command:
-
 ```bash
-node calculator.js
+npm start
