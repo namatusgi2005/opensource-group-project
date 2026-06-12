@@ -7,10 +7,22 @@ const rl = readline.createInterface({
 });
 
 let history = []; 
-
+// nura ali bala - CIS/STE/22/1024
 function add(x, y) { return x + y; }
 function subtract(x, y) { return x - y; }
 function multiply(x, y) { return x * y; }
+
+function power(x, y) {
+    return Math.pow(x, y);
+}
+
+function squareRoot(x) {
+    if (x < 0) {
+        return "Error: Cannot calculate square root of a negative number";
+    }
+    return Math.sqrt(x);
+}
+
 function divide(a, b) {
     const numA = validateNumber(a);
     const numB = validateNumber(b);
@@ -72,6 +84,9 @@ function showMenu() {
     drawLine("  3 ➜ Multiplication (×)", chalk.blue);
     drawLine("  4 ➜ Division (÷)", chalk.blue);
     drawLine("  5 ➜ Clear History", chalk.blue);
+    // nura ali bala cis/ste/22/1024
+    drawLine(" 6 ➜ Power (^)", chalk.blue);
+    drawLine(" 7 ➜ Square Root (√)", chalk.blue);
     
     // History Panel inside the box
     if (history.length > 0) {
@@ -121,6 +136,9 @@ function askQuestion() {
                     case "2": result = subtract(num1, num2); symbol = "-"; break;
                     case "3": result = multiply(num1, num2); symbol = "×"; break;
                     case "4": result = divide(num1, num2); symbol = "÷"; break;
+                        // nura ali bala cis/ste/22/1024
+                     case "6": result = power(num1, num2); symbol = "^"; break;
+                    case "7": result = squareRoot(num1); symbol = "√"; break;
                 }
 
                 const outputString = `${num1} ${symbol} ${num2} = ${result}`;
